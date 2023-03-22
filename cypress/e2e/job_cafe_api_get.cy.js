@@ -61,9 +61,9 @@ describe('Get Jobs Test', () => {
       console.log(resultsList)
       expect(Response.status).eq(200)
 
-      // for(let i=0; i<resultsList.lenght; i++){
-      //   expect(resultsList[i].location).eq('Tel Aviv-Yafo, Israel')
-      // }
+      for(let i=0; i<resultsList.lenght; i++){
+        expect(resultsList[i].location).eq('Tel Aviv-Yafo, Israel')
+      }
        
 
 
