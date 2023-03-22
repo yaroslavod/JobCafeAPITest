@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+let adminKey = 'adminadmin'
+
+Cypress.Commands.add('deletePositionById', (id) => {
+    cy.request({
+        method: 'DELETE',
+        url: '/' + id,
+        qs: { key: adminKey }
+
+    }).then((Response) => {
+        console.log(Response)
+    })
+
+})

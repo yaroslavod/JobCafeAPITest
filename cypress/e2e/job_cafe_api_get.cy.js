@@ -1,6 +1,5 @@
 /// <reference types = "Cypress"/>
 
-const { result, eq } = require("cypress/types/lodash")
 
 
 describe('Get Jobs Test', () => {
@@ -29,7 +28,7 @@ describe('Get Jobs Test', () => {
       console.log(Response.body.content),
       expect(Response.body.content[0]).have.property("id"),
       expect(Response.body.content[0].id).not.null,
-      expect(Response.body.content[0].id).eq("63b44d1374f47208c4447130")
+      expect(Response.body.content[0].id).eq("63b44b6b74f47208c44470d1")
        
     })
   })
@@ -40,13 +39,13 @@ describe('Get Jobs Test', () => {
       var result = Response.body.content[1]
       console.log(result)
       expect(result).have.property("id")
-      expect(result.id).eq("63b44c0574f47208c44470fc")
+      expect(result.id).eq("63b44a8174f47208c44470b3")
 
       expect(result).have.property("location")
-      expect(result.location).eq("Tel Aviv-Yafo, Israel")
+      expect(result.location).eq("Edmonton, AB")
 
       expect(result).have.property("position")
-      expect(result.position).eq("Web Project Manager")
+      expect(result.position).eq("Project Manager IV - Enbridge")
 
       expect(result).have.property("link")
       expect(result.link).contain("http")
